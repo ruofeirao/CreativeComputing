@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style>
+div{
+	position: absolute;
+}
+@keyframes appear{
+	0%{
+		background-color: white;
+	}
+	3%{
+		background-color: white;
+	}
+	15%{
+		background-color: #01C3FE;
+	}
+	85%{
+		background-color: #01C3FE;
+	}
+	97%{
+		background-color: white;
+	}
+	100%{
+		background-color: white;
+	}
+}
+@keyframes verticalslidein{
+	0%{
+		transform: translate(0, -800px);
+	}
+	22.5%{
+		transform: translate(0, -800px);
+	}
+	30%{
+		transform: translate(0, 0);
+	}
+	55%{
+		transform: translate(0, 0);
+	}
+	73%{
+		transform: translate(0, 800px);
+	}
+	100%{
+		transform: translate(0, 800px);
+	}
+}
+@keyframes horizontalslideinone{
+	0%{
+		transform: translate(1000px, 0);
+	}
+	12.5%{
+		transform: translate(1000px, 0);
+	}
+	17.5%{
+		transform: translate(0, 0);
+	}
+	78%{
+		transform: translate(0, 0);
+	}
+	90%{
+		transform: translate(-1500px, 0);
+	}
+	100%{
+		transform: translate(-1500px, 0);
+	}
+}
+@keyframes horizontalslideintwo{
+	0%{
+		transform: translate(1000px, 0);
+	}
+	13%{
+		transform: translate(1000px, 0);
+	}
+	18%{
+		transform: translate(0, 0);
+	}
+	77%{
+		transform: translate(0, 0);
+	}
+	89%{
+		transform: translate(-1500px, 0);
+	}
+	100%{
+		transform: translate(-1500px, 0);
+	}
+}
+@keyframes horizontalslideinthree{
+	0%{
+		transform: translate(1000px, 0);
+	}
+	13.5%{
+		transform: translate(1000px, 0);
+	}
+	18.5%{
+		transform: translate(0, 0);
+	}
+	76%{
+		transform: translate(0, 0);
+	}
+	88%{
+		transform: translate(-1500px, 0);
+	}
+	100%{
+		transform: translate(-1500px, 0);
+	}
+}
+@keyframes horizontalslideinfour{
+	0%{
+		transform: translate(1000px, 0);
+	}
+	14%{
+		transform: translate(1000px, 0);
+	}
+	19%{
+		transform: translate(0, 0);
+	}
+	75%{
+		transform: translate(0, 0);
+	}
+	87%{
+		transform: translate(-1500px, 0);
+	}
+	100%{
+		transform: translate(-1500px, 0);
+	}
+}
+@keyframes horizontalslideinfive{
+	0%{
+		transform: translate(1000px, 0);
+	}
+	14.5%{
+		transform: translate(1000px, 0);
+	}
+	19.5%{
+		transform: translate(0, 0);
+	}
+	74%{
+		transform: translate(0, 0);
+	}
+	86%{
+		transform: translate(-1500px, 0);
+	}
+	100%{
+		transform: translate(-1500px, 0);
+	}
+}
+@keyframes horizontalslideinsix{
+	0%{
+		transform: translate(1000px, 0);
+	}
+	15%{
+		transform: translate(1000px, 0);
+	}
+	20%{
+		transform: translate(0, 0);
+	}
+	73%{
+		transform: translate(0, 0);
+	}
+	85%{
+		transform: translate(-1500px, 0);
+	}
+	100%{
+		transform: translate(-1500px, 0);
+	}
+}
+@keyframes horizontalslideinseven{
+	0%{
+		transform: translate(1000px, 0);
+	}
+	15.5%{
+		transform: translate(1000px, 0);
+	}
+	20.5%{
+		transform: translate(0, 0);
+	}
+	72%{
+		transform: translate(0, 0);
+	}
+	84%{
+		transform: translate(-1500px, 0);
+	}
+	100%{
+		transform: translate(-1500px, 0);
+	}
+}
+@keyframes horizontalslideineight{
+	0%{
+		transform: translate(1000px, 0);
+	}
+	16%{
+		transform: translate(1000px, 0);
+	}
+	21%{
+		transform: translate(0, 0);
+	}
+	71%{
+		transform: translate(0, 0);
+	}
+	83%{
+		transform: translate(-1500px, 0);
+	}
+	100%{
+		transform: translate(-1500px, 0);
+	}
+}
+@keyframes horizontalslideinnine{
+	0%{
+		transform: translate(1000px, 0);
+	}
+	16.5%{
+		transform: translate(1000px, 0);
+	}
+	21.5%{
+		transform: translate(0, 0);
+	}
+	70%{
+		transform: translate(0, 0);
+	}
+	82%{
+		transform: translate(-1500px, 0);
+	}
+	100%{
+		transform: translate(-1500px, 0);
+	}
+}
+@keyframes flash{
+	0%{
+
+	}
+	100%{
+
+	}
+}
+#blue-square{
+	animation: appear 20s infinite;
+	background-color:#01C3FE;
+	width:80vmin;
+	height:80vmin;
+	top:10%;
+	left:50%;
+	margin-left: -40vmin;
+	margin-right: -40vmin;
+}
+#blue-rectangle{
+	animation: verticalslidein 20s infinite;
+	background-color:#2D59C1;
+	width:35vmin;
+	height:80vmin;
+	top:10%;
+	left:50%;
+	margin-left: -17.5vmin;
+	margin-right: -17.5vmin;
+}
+#magenta-rectangle-1{
+	animation: horizontalslideinone 20s infinite;
+	background-color:#A92F7C;
+	width:60vmin;
+	height:5vmin;
+	top:17.5%;
+	left:50%;
+	margin-left: -30vmin;
+	margin-right: -30vmin;
+}
+#magenta-rectangle-2{
+	animation: horizontalslideintwo 20s infinite;
+	background-color:#A92F7C;
+	width:60vmin;
+	height:5vmin;
+	top:25%;
+	left:50%;
+	margin-left: -30vmin;
+	margin-right: -30vmin;
+}
+#magenta-rectangle-3{
+	animation: horizontalslideinthree 20s infinite;
+	background-color:#A92F7C;
+	width:60vmin;
+	height:5vmin;
+	top:32.5%;
+	left:50%;
+	margin-left: -30vmin;
+	margin-right: -30vmin;
+}
+#magenta-rectangle-4{
+	animation: horizontalslideinfour 20s infinite;
+	background-color:#A92F7C;
+	width:60vmin;
+	height:5vmin;
+	top:40%;
+	left:50%;
+	margin-left: -30vmin;
+	margin-right: -30vmin;
+}
+#magenta-rectangle-5{
+	animation: horizontalslideinfive 20s infinite;
+	background-color:#A92F7C;
+	width:60vmin;
+	height:5vmin;
+	top:47.5%;
+	left:50%;
+	margin-left: -30vmin;
+	margin-right: -30vmin;
+}
+#magenta-rectangle-6{
+	animation: horizontalslideinsix 20s infinite;
+	background-color:#A92F7C;
+	width:60vmin;
+	height:5vmin;
+	top:55%;
+	left:50%;
+	margin-left: -30vmin;
+	margin-right: -30vmin;
+}
+#magenta-rectangle-7{
+	animation: horizontalslideinseven 20s infinite;
+	background-color:#A92F7C;
+	width:60vmin;
+	height:5vmin;
+	top:62.5%;
+	left:50%;
+	margin-left: -30vmin;
+	margin-right: -30vmin;
+}
+#magenta-rectangle-8{
+	animation: horizontalslideineight 20s infinite;
+	background-color:#A92F7C;
+	width:60vmin;
+	height:5vmin;
+	top:70%;
+	left:50%;
+	margin-left: -30vmin;
+	margin-right: -30vmin;
+}
+#magenta-rectangle-9{
+	animation: horizontalslideinnine 20s infinite;
+	background-color:#A92F7C;
+	width:60vmin;
+	height:5vmin;
+	top:77.5%;
+	left:50%;
+	margin-left: -30vmin;
+	margin-right: -30vmin;
+}
+#brown-rectangle-1{
+	animation: flash 20s infinite;
+	background-color:#5D2616;
+	width:35vmin;
+	height:5vmin;
+	top:17.5%;
+	left:50%;
+	margin-left: -17.5vmin;
+	margin-right: -17.5vmin;
+}
+#brown-rectangle-2{
+	animation: flash 20s infinite;
+	background-color:#5D2616;
+	width:35vmin;
+	height:5vmin;
+	top:25%;
+	left:50%;
+	margin-left: -17.5vmin;
+	margin-right: -17.5vmin;
+}
+#brown-rectangle-3{
+	animation: flash 20s infinite;
+	background-color:#5D2616;
+	width:35vmin;
+	height:5vmin;
+	top:32.5%;
+	left:50%;
+	margin-left: -17.5vmin;
+	margin-right: -17.5vmin;
+}
+#brown-rectangle-4{
+	animation: flash 20s infinite;
+	background-color:#5D2616;
+	width:35vmin;
+	height:5vmin;
+	top:40%;
+	left:50%;
+	margin-left: -17.5vmin;
+	margin-right: -17.5vmin;
+}
+#brown-rectangle-5{
+	animation: flash 20s infinite;
+	background-color:#5D2616;
+	width:35vmin;
+	height:5vmin;
+	top:47.5%;
+	left:50%;
+	margin-left: -17.5vmin;
+	margin-right: -17.5vmin;
+}
+#brown-rectangle-6{
+	animation: flash 20s infinite;
+	background-color:#5D2616;
+	width:35vmin;
+	height:5vmin;
+	top:55%;
+	left:50%;
+	margin-left: -17.5vmin;
+	margin-right: -17.5vmin;
+}
+#brown-rectangle-7{
+	animation: flash 20s infinite;
+	background-color:#5D2616;
+	width:35vmin;
+	height:5vmin;
+	top:62.5%;
+	left:50%;
+	margin-left: -17.5vmin;
+	margin-right: -17.5vmin;
+}
+#brown-rectangle-8{
+	animation: flash 20s infinite;
+	background-color:#5D2616;
+	width:35vmin;
+	height:5vmin;
+	top:70%;
+	left:50%;
+	margin-left: -17.5vmin;
+	margin-right: -17.5vmin;
+}
+#brown-rectangle-9{
+	animation: flash 20s infinite;
+	background-color:#5D2616;
+	width:35vmin;
+	height:5vmin;
+	top:77.5%;
+	left:50%;
+	margin-left: -17.5vmin;
+	margin-right: -17.5vmin;
+}
+</style>
+</head>
+<body>
+	<div id="blue-square"></div>
+	<div id="blue-rectangle"></div>
+	<div id="magenta-rectangle-1"></div>
+	<div id="magenta-rectangle-2"></div>
+	<div id="magenta-rectangle-3"></div>
+	<div id="magenta-rectangle-4"></div>
+	<div id="magenta-rectangle-5"></div>
+	<div id="magenta-rectangle-6"></div>
+	<div id="magenta-rectangle-7"></div>
+	<div id="magenta-rectangle-8"></div>
+	<div id="magenta-rectangle-9"></div>
+	<div id="brown-rectangle-1"></div>
+	<div id="brown-rectangle-2"></div>
+	<div id="brown-rectangle-3"></div>
+	<div id="brown-rectangle-4"></div>
+	<div id="brown-rectangle-5"></div>
+	<div id="brown-rectangle-6"></div>
+	<div id="brown-rectangle-7"></div>
+	<div id="brown-rectangle-8"></div>
+	<div id="brown-rectangle-9"></div>
+</body>
+</html>
