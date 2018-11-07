@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MINE</title>
+<style>
+html, body{
+
+</style>
+</head>
+<body>
+
+<!-- this image source acts as reference guide in the script -->
+<img id = "screen" src="adventime.gif">
+
+<script>
+
+//this gets the image from files inside folder
+var screen = document.getElementById('screen');
+
+// this sorts the files in the array format PLease note add other files.
+var channels = [
+				"adventime.gif", 
+				"garfield-1",
+				"nature.gif",
+				"snoopy-1",
+				"spongebob.gif",
+				"snoopy-9.gif",
+				"nba.gif",
+				"garfield-9.gif",
+				"leopard.gif",
+				"cooking.gif",
+				"garfield-6.gif",
+				"lake.gif",
+				"adventime.gif",
+				"harry-potter.gif",
+				"simpsons.gif",
+				"garfield-5.gif",
+				"got.gif",
+				"snoopy-10.gif",
+				"mlb.gif",
+				"garfield-2.gif",
+				"totoro.gif",
+				"rain.gif",
+				"snoopy-4.gif",
+				"garfield-10.gif",
+				"snoopy-11.gif",
+				"garfield-3.gif",
+				]
+
+
+var chanelsindex = 1;
+
+// you can remove this function basically this was play the function in order of the giff.
+function changeImage (){
+screen.setAttribute ("src",channels[chanelsindex] );
+chanelsindex++; // plus means forward loop.
+if(chanelsindex > 3){chanelsindex = 0;}
+}
+
+//What this does is basically tells the function what to trigger, upon
+document.addEventListener("keydown", keyDownTextField, false);
+
+function keyDownTextField(e) {
+var keyCode = e.keyCode;
+//key code is 38 means donwn.
+  if(keyCode==38) {
+		screen.setAttribute ("src",channels[chanelsindex] );
+		chanelsindex++;
+  } else {
+		screen.setAttribute ("src",channels[chanelsindex] );
+		chanelsindex--;
+  }
+}
+
+</script>
+<button onclick ="changeImage()" > next</button>
+</body>
+</html>
