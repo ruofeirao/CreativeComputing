@@ -14,47 +14,31 @@
 
 var channels = [
 					"garfield-1.gif",
-					"nature.gif",
-					"snoopy-1.gif",
-					"spongebob.gif",
-					"snoopy-9.gif",
-					"nba.gif",
-					"garfield-9.gif",
-					"leopard.gif",
-					"cooking.gif",
-					"garfield-6.gif",
-					"lake.gif",
-					"adventime.gif",
-					"harry-potter.gif",
-					"simpsons.gif",
-					"garfield-5.gif",
-					"got.gif",
-					"snoopy-10.gif",
-					"mlb.gif",
 					"garfield-2.gif",
-					"totoro.gif",
-					"rain.gif",
-					"snoopy-4.gif",
-					"garfield-10.gif",
-					"snoopy-11.gif",
 					"garfield-3.gif",
+					"garfield-4.gif",
+					"garfield-5.gif",
+					"garfield-6.gif",
+					"garfield-7.gif",
+					"garfield-8.gif",
+					"garfield-9.gif",
+					"garfield-10.gif",
 					]
 var channels_index = 0;
 
 function change_channel(event){
 	console.log(event);
-	document.getElementById("screen").src = channels[channels_index]
 	var x = event.keyCode;
-	if (x == 97){//38){
+	if (x == 38){//38){
 		channels_index = channels_index + 1;
-}
-	if(x == 122){//40){
+	}
+	if(x == 40){//40){
 		channels_index = channels_index - 1;
-}
+	}
+	document.getElementById("screen").src = channels[channels_index]
 }
 
-document.onkeypress = change_channel;
-
+document.onkeydown = change_channel;
 
 </script>
 </body>
