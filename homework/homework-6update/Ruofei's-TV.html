@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ruofei's TV</title>
+<style>
+img{
+	display: block;
+	margin-top: 15vmin;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100vmin;
+	height: 70vmin;
+	object-fit: cover;
+}
+</style>
+</head>
+<body>
+<img id="screen" src="garfield-7.gif">
+
+<script>
+var channels = [
+				"garfield-7.gif", 
+				"garfield-1.gif", 
+				"garfield-10.gif", 
+				"garfield-2.gif",
+				"garfield-9.gif", 
+				"garfield-4.gif",
+				"garfield-6.gif",
+				"garfield-5.gif", 
+				"garfield-3.gif", 
+				"garfield-8.gif",
+				"ghibli.gif",
+				"lake.gif",
+				"nature.gif",
+				"rain.gif",
+				"snoopy-1.gif",
+				"snoopy-3.gif",
+				"snoopy-4.gif",
+				"snoopy-7.gif",
+				"snoopy-9.gif",
+				"snoopy-10.gif",
+				"totoro.gif"
+				]
+var channels_index = 0;
+
+function change_channel(event){
+	console.log(event);
+	if(event.keyCode == 38) {
+		channels_index = (channels_index + 1) % 21;
+	}
+	if(event.keyCode == 40) {
+		channels_index = (((channels_index - 1) % 21) + 21) % 21;
+	}
+	document.getElementById("screen").src = channels[channels_index];
+}
+
+document.onkeydown = change_channel;
+
+</script>
+</body>
+</html>
